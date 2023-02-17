@@ -4,6 +4,7 @@ Button Driver
 --------------------------------------------------------------------------
 License:   
 Copyright 2021-2023 - Erik Welsh
+Modified by Lily Scholnik - 2023
 
 Redistribution and use in source and binary forms, with or without 
 modification, are permitted provided that the following conditions are met:
@@ -110,7 +111,7 @@ class Button():
         # Initialize Button
         # HW#4 TODO: (one line of code)
         #   Remove "pass" and use the Adafruit_BBIO.GPIO library to set up the button
-        pass
+        GPIO.setup(self.pin, IN)
 
     # End def
 
@@ -124,7 +125,7 @@ class Button():
         # HW#4 TODO: (one line of code)
         #   Remove "pass" and return the comparison of input value of the GPIO pin of 
         #   the buton (i.e. self.pin) to the "pressed value" of the class 
-        pass
+        Return: self.pin == self.pressed_value
 
     # End def
 
@@ -161,7 +162,7 @@ class Button():
         #   GPIO pin of the buton (i.e. self.pin) to the "unpressed value" 
         #   of the class (i.e. we are executing the while loop while the 
         #   button is not being pressed)
-        while(False):
+        while(Return: self.pin == self.unpressed_value):
         
             if function is not None:
                 function_return_value = function()
@@ -179,7 +180,7 @@ class Button():
         #   GPIO pin of the buton (i.e. self.pin) to the "pressed value" 
         #   of the class (i.e. we are executing the while loop while the 
         #   button is being pressed)
-        while(False):
+        while(Return: self.pin == self.pressed_value):
             time.sleep(self.sleep_time)
         
         # Compute the button_press_time
