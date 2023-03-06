@@ -4,9 +4,7 @@
 Simple Calculator
 --------------------------------------------------------------------------
 License:   
-Copyright 2022 - Erik Welsh
-
-Modified by Lily Scholnik - 2023
+Copyright 2023 - Lily Scholnik
 
 Redistribution and use in source and binary forms, with or without 
 modification, are permitted provided that the following conditions are met:
@@ -57,6 +55,11 @@ Error conditions:
 # NOTE - Add import statements to allow access to Python library functions
 
 import operator
+
+try: 
+    input = raw_input
+except:
+    pass
 
 # ------------------------------------------------------------------------
 # Constants
